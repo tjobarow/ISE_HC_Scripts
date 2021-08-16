@@ -1,0 +1,1086 @@
+{
+  "ERSDeploymentInfo" : {
+    "networkAccessInfo" : {
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "isCsnEnabled" : false,
+      "nodeList" : {
+        "nodeAndScope" : [ "deployment", {
+          "content" : [ {
+            "name" : "{http://www.cisco.com/NetworkAccessInfo}NDGInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node$NDGInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node",
+            "value" : {
+              "ndghierarchyMap" : "{0=0, 1=0, 2=3, 3=2, 4=0, 5=0, 6=0, 7=0, 8=0, 9=0, 10=0, 11=0, 12=0, 13=0, 14=0, 15=0, 16=0, 17=0, 18=0, 19=0, 20=0, 21=0, 22=0, 23=0, 24=0, 25=0, 26=0, 27=0, 28=0, 29=0, 30=0, 31=0, 32=0, 33=0, 34=0, 35=0, 36=0, 37=0, 38=0, 39=0, 40=0, 41=0, 42=0, 43=0, 44=0, 45=0, 46=0, 47=0, 48=0, 49=0, 50=0, 51=0, 52=0, 53=0, 54=0, 55=0, 56=0, 57=0, 58=0, 59=0, 60=0, 61=0, 62=0, 63=0, 64=0, 65=0, 66=0, 67=0, 68=0, 69=0, 70=0, 71=0, 72=0, 73=0, 74=0, 75=0, 76=0, 77=0, 78=0, 79=0, 80=0, 81=0, 82=0, 83=0, 84=0, 85=0, 86=0, 87=0, 88=0, 89=0, 90=0, 91=0, 92=0, 93=0, 94=0, 95=0, 96=0, 97=0, 98=0, 99=0}",
+              "ndgheierarchyNADMap" : "{2=3, 3=0}"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NetworkAccessInfo}AuthenticationInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node$AuthenticationInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node",
+            "value" : {
+              "policyLineCount" : 0,
+              "localIdentityNonAdminUserCount" : 0,
+              "restIDInfo" : [ {
+                "restIDType" : [ ],
+                "restidcount" : 0
+              } ],
+              "odbcInfo" : [ {
+                "odbccount" : 0,
+                "odbctype" : [ ]
+              } ],
+              "adauthStoreCount" : 1,
+              "ldapidstoreCount" : 0,
+              "radiusidstoreCount" : 0,
+              "rsaidstoreCount" : 0
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NetworkAccessInfo}ADInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node$ADInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node",
+            "value" : {
+              "selectedAuthDomainCount" : 1,
+              "selectedGroupCount" : 11,
+              "selectedAttrCount" : 2,
+              "failedAuthProtection" : {
+                "failedAuthProtectionEnabled" : false,
+                "authProtectionPolicy" : ""
+              },
+              "adname" : "ADInstance"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NetworkAccessInfo}AuthorizationInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node$AuthorizationInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NetworkAccessInfo$NodeList$Node",
+            "value" : {
+              "policyLineCount" : 0,
+              "activeVLANCount" : 0,
+              "activedACLCount" : 4
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          } ]
+        } ]
+      },
+      "sdaVNs" : [ ],
+      "trustSecControl" : "ISE",
+      "radius3RdParty" : [ ]
+    },
+    "profilerInfo" : {
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "nodeList" : {
+        "node" : [ {
+          "profiles" : {
+            "profile" : [ ],
+            "customProfilesCount" : 0,
+            "endpointTypes" : "",
+            "totalProfilesCount" : 676,
+            "uniqueEndpointsCount" : 0,
+            "unknownEndpointsCount" : 0,
+            "totalEndpointsCount" : 0,
+            "unknownEndpointsPercentage" : 0
+          },
+          "onlineSubscriptionEnabled" : true,
+          "lastAppliedFeedDateTime" : "2021-03-23T10:58:02.082-07:00",
+          "scope" : "deployment"
+        } ]
+      }
+    },
+    "deploymentInfo" : {
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "isWalkmeEnabled" : true,
+      "versionHistoryInfo" : [ {
+        "opType" : "Application Install",
+        "mainVersion" : "3.1.0.518",
+        "epochTime" : 1628886269000,
+        "bundleName" : "ise.tar.gz",
+        "panfqdn" : "ise31.obarowski.lab"
+      } ],
+      "nodeList" : {
+        "nodeAndNodeCountAndCountInfo" : [ {
+          "name" : "{http://www.cisco.com/DeploymentInfo}Node",
+          "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : {
+            "content" : [ {
+              "name" : "{http://www.cisco.com/DeploymentInfo}NodeTypes",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "PAP,MNT,PDP",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}ProfilerProbes",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "activedir,dhcp,nmap,radius,snmpquery",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}SN",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "9CBN8CHLIH4",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}Status",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "STANDALONE",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}NodeServiceType",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "PROFILER,SESSION",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}Version",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "3.1.0.518",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}PID",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "ISE-VM-K9",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}VID",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "V01",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}PeakCpuUtilization",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "52.42",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}PeakMemoryUtilization",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "51.76",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}LastLoggedInAdminViaCLI",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}LastLoggedInAdminViaCLITimestamp",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}NumberOfCpuCores",
+              "declaredType" : "java.lang.Integer",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : 4,
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}VMDiskSpace",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "300 GiB",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}Uptime",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "2021-08-16 09:13:11 EDT",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}VMMemoryReservation",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "0 MB",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}VMCpuReservation",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "0 MHz",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}VMMemoryLimit",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "4294967295 MB",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}VMCpuLimit",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "4294967295 MHz",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}PT",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "VM",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}Profile",
+              "declaredType" : "java.lang.String",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : "LARGE",
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}Memory",
+              "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node$Memory",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : {
+                "fromDate" : "2021-08-15%2016:16:35",
+                "toDate" : "2021-08-16%2016:16:35",
+                "total" : "16213560",
+                "free" : "799720",
+                "percent" : "4.9324145"
+              },
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}Disk",
+              "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node$Disk",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : {
+                "fromDate" : "2021-08-15%2016:16:42",
+                "toDate" : "2021-08-16%2016:16:42",
+                "fileSystem" : [ {
+                  "name" : "/dev/sda1",
+                  "total" : "991512",
+                  "used" : "151328",
+                  "available" : "772600",
+                  "percent" : "17%",
+                  "mountPoint" : "/boot"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "1621356",
+                  "used" : "0",
+                  "available" : "1621356",
+                  "percent" : "0%",
+                  "mountPoint" : "/run/user/440"
+                }, {
+                  "name" : "/dev/sda3",
+                  "total" : "95054",
+                  "used" : "1588",
+                  "available" : "86298",
+                  "percent" : "2%",
+                  "mountPoint" : "/storedconfig"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "8106780",
+                  "used" : "0",
+                  "available" : "8106780",
+                  "percent" : "0%",
+                  "mountPoint" : "/sys/fs/cgroup"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "8106780",
+                  "used" : "1148",
+                  "available" : "8105632",
+                  "percent" : "1%",
+                  "mountPoint" : "/run"
+                }, {
+                  "name" : "/dev/sda2",
+                  "total" : "25571108",
+                  "used" : "2680116",
+                  "available" : "21569008",
+                  "percent" : "12%",
+                  "mountPoint" : "/"
+                }, {
+                  "name" : "devtmpfs",
+                  "total" : "8090420",
+                  "used" : "0",
+                  "available" : "8090420",
+                  "percent" : "0%",
+                  "mountPoint" : "/dev"
+                }, {
+                  "name" : "/dev/sda7",
+                  "total" : "271691188",
+                  "used" : "41540028",
+                  "available" : "216280264",
+                  "percent" : "17%",
+                  "mountPoint" : "/opt"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "1621356",
+                  "used" : "0",
+                  "available" : "1621356",
+                  "percent" : "0%",
+                  "mountPoint" : "/run/user/0"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "1621356",
+                  "used" : "0",
+                  "available" : "1621356",
+                  "percent" : "0%",
+                  "mountPoint" : "/run/user/322"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "1621356",
+                  "used" : "0",
+                  "available" : "1621356",
+                  "percent" : "0%",
+                  "mountPoint" : "/run/user/301"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "8106780",
+                  "used" : "84",
+                  "available" : "8106696",
+                  "percent" : "1%",
+                  "mountPoint" : "/dev/shm"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "1621356",
+                  "used" : "0",
+                  "available" : "1621356",
+                  "percent" : "0%",
+                  "mountPoint" : "/run/user/321"
+                }, {
+                  "name" : "tmpfs",
+                  "total" : "1621356",
+                  "used" : "0",
+                  "available" : "1621356",
+                  "percent" : "0%",
+                  "mountPoint" : "/run/user/304"
+                }, {
+                  "name" : "/dev/sda6",
+                  "total" : "1983056",
+                  "used" : "6308",
+                  "available" : "1857964",
+                  "percent" : "1%",
+                  "mountPoint" : "/tmp"
+                } ]
+              },
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}LoadAvg",
+              "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node$LoadAvg",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : {
+                "fromDate" : "2021-08-15%2016:16:42",
+                "toDate" : "2021-08-16%2016:16:42",
+                "loadAvgOne" : " 0.60",
+                "loadAvgFive" : " 0.40",
+                "loadAvgFifteen" : " 0.41"
+              },
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            }, {
+              "name" : "{http://www.cisco.com/DeploymentInfo}TCNACInfo",
+              "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node$TCNACInfo",
+              "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node",
+              "value" : {
+                "content" : [ {
+                  "name" : "{http://www.cisco.com/DeploymentInfo}isTCNACEnabled",
+                  "declaredType" : "java.lang.Boolean",
+                  "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$Node$TCNACInfo",
+                  "value" : false,
+                  "nil" : false,
+                  "globalScope" : false,
+                  "typeSubstituted" : false
+                } ]
+              },
+              "nil" : false,
+              "globalScope" : false,
+              "typeSubstituted" : false
+            } ]
+          },
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        }, {
+          "name" : "{http://www.cisco.com/DeploymentInfo}CountInfo",
+          "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList$CountInfo",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : {
+            "fromDate" : "2021-08-15%2016:16:29",
+            "toDate" : "2021-08-16%2016:16:29",
+            "currentPostureEndptCount" : 0,
+            "currentGuestUserCount" : 0,
+            "currentMDMEndPtCount" : 0,
+            "currentPxGridClientCount" : 0
+          },
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        }, {
+          "name" : "{http://www.cisco.com/DeploymentInfo}NodeCount",
+          "declaredType" : "java.lang.Integer",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : 1,
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        }, {
+          "name" : "{http://www.cisco.com/DeploymentInfo}PAPNodeCount",
+          "declaredType" : "java.lang.String",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : "1",
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        }, {
+          "name" : "{http://www.cisco.com/DeploymentInfo}MnTNodeCount",
+          "declaredType" : "java.lang.String",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : "1",
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        }, {
+          "name" : "{http://www.cisco.com/DeploymentInfo}PDPNodeCount",
+          "declaredType" : "java.lang.String",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : "1",
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        }, {
+          "name" : "{http://www.cisco.com/DeploymentInfo}PxGridNodeCount",
+          "declaredType" : "java.lang.String",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : "0",
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        }, {
+          "name" : "{http://www.cisco.com/DeploymentInfo}PICNodeCount",
+          "declaredType" : "java.lang.String",
+          "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.DeploymentInfo$NodeList",
+          "value" : "0",
+          "nil" : false,
+          "globalScope" : false,
+          "typeSubstituted" : false
+        } ]
+      },
+      "fipsstatus" : "Disabled"
+    },
+    "nadInfo" : {
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "nodeList" : {
+        "nodeAndScope" : [ "deployment", {
+          "content" : [ {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "Cisco",
+              "isCiscoProvided" : true,
+              "isDefProfile" : true,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : true,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "Cisco"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "ArubaWireless",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "Aruba"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "MotorolaWireless",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "Motorola"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "HPWireless",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "HP"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "HPWired",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "HP"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "AlcatelWired",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "Alcatel"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "BrocadeWired",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "Brocade"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "RuckusWireless",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "Ruckus"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/NADInfo}NADProfileInfo",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node$NADProfileInfo",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.NADInfo$NodeList$Node",
+            "value" : {
+              "name" : "HPWired_SNMP_CoA",
+              "isCiscoProvided" : true,
+              "isDefProfile" : false,
+              "isTacacsSupported" : true,
+              "isRadiusSupported" : true,
+              "isTrustSecSupported" : false,
+              "activeNADCount" : 0,
+              "totalNADCount" : 0,
+              "vendorName" : "HP"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          } ]
+        } ]
+      },
+      "nadcountInfo" : {
+        "totalActiveNADCount" : 0
+      }
+    },
+    "mdmInfo" : {
+      "activeMdmServersCount" : "0",
+      "activeDesktopMdmServersCount" : "0",
+      "activeMobileMdmServersCount" : "0",
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "nodeList" : {
+        "nodeAndScope" : [ "deployment", {
+          "content" : [ ]
+        } ]
+      }
+    },
+    "licensesInfo" : {
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "nodeList" : {
+        "nodeAndScope" : [ {
+          "content" : [ {
+            "name" : "{http://www.cisco.com/LicenseInfo}SmartAccountName",
+            "declaredType" : "java.lang.String",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : "",
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}VirtualAccountName",
+            "declaredType" : "java.lang.String",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : "",
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}ConnectionMethod",
+            "declaredType" : "java.lang.String",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : "Direct Https",
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}VMSmallConsumptionCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}VMMediumConsumptionCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}VMLargeConsumptionCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}VMCommonConsumptionCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 1,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}TACACSConsumptionCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}deviceAdminCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}PeakEssentialCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}PeakAdvantageCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}PeakPremierCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}VMCommonLicenseCount",
+            "declaredType" : "java.lang.Integer",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : 0,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isAnyLicenseExpired",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : false,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isEssentialInstalled",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : true,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isEvaluationLic",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : true,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isAdvantageInstalled",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : true,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isPremierInstalled",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : true,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isPicInstalled",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : false,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isPicUpgradeInstalled",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : false,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}isWiredEnabled",
+            "declaredType" : "java.lang.Boolean",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : true,
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}License",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node$License",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : {
+              "serviceTypes" : "[]",
+              "count" : 0,
+              "remainingDays" : 87,
+              "expiryDate" : "11-nov-2021",
+              "fileName" : "regid.2020-05.com.cisco.ISE_P,1.0_94e0c744-8da5-4b8f-9667-b582a6c2e884",
+              "isExpired" : false,
+              "isEvaluation" : true,
+              "isWiredEnabled" : false,
+              "term" : 0,
+              "primaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4",
+              "secondaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}License",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node$License",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : {
+              "serviceTypes" : "[]",
+              "count" : 0,
+              "remainingDays" : 87,
+              "expiryDate" : "11-nov-2021",
+              "fileName" : "regid.2020-05.com.cisco.ISE_A,1.0_967f72d7-4b1b-49f4-add9-e52618d8faec",
+              "isExpired" : false,
+              "isEvaluation" : true,
+              "isWiredEnabled" : false,
+              "term" : 0,
+              "primaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4",
+              "secondaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}License",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node$License",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : {
+              "serviceTypes" : "[]",
+              "count" : 0,
+              "remainingDays" : 87,
+              "expiryDate" : "11-nov-2021",
+              "fileName" : "regid.2016-03.com.cisco.ISE_TACACS,1.0_521990b7-946a-445e-af5b-2a15500f908f",
+              "isExpired" : false,
+              "isEvaluation" : true,
+              "isWiredEnabled" : false,
+              "term" : 0,
+              "primaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4",
+              "secondaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}License",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node$License",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : {
+              "serviceTypes" : "[]",
+              "count" : 0,
+              "remainingDays" : 87,
+              "expiryDate" : "11-nov-2021",
+              "fileName" : "regid.2020-05.com.cisco.ISE_E,1.0_2e62f8e0-3062-4dd2-8e0b-dae045e50fd8",
+              "isExpired" : false,
+              "isEvaluation" : true,
+              "isWiredEnabled" : true,
+              "term" : 0,
+              "primaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4",
+              "secondaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}License",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node$License",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : {
+              "serviceTypes" : "[]",
+              "count" : 1,
+              "remainingDays" : 90,
+              "expiryDate" : "14-nov-2021",
+              "fileName" : "regid.2021-05.com.cisco.ISE_VM_LIC,1.0_32f900df-119f-4939-8dad-cc3df18ad7d9",
+              "isExpired" : false,
+              "isEvaluation" : true,
+              "isWiredEnabled" : false,
+              "term" : 0,
+              "primaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4",
+              "secondaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}License",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node$License",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : {
+              "serviceTypes" : "[]",
+              "count" : 1,
+              "remainingDays" : 90,
+              "expiryDate" : "14-nov-2021",
+              "fileName" : "regid.2018-05.com.cisco.ISE_PIC_VM,1.0_965e5f17-2dab-4579-9cfa-85353033dbb5",
+              "isExpired" : false,
+              "isEvaluation" : true,
+              "isWiredEnabled" : false,
+              "term" : 0,
+              "primaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4",
+              "secondaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          }, {
+            "name" : "{http://www.cisco.com/LicenseInfo}License",
+            "declaredType" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node$License",
+            "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.LicensesInfo$NodeList$Node",
+            "value" : {
+              "serviceTypes" : "[]",
+              "count" : 1,
+              "remainingDays" : 90,
+              "expiryDate" : "14-nov-2021",
+              "fileName" : "regid.2018-05.com.cisco.ISE_PIC_UPG,1.0_50c910f8-00cb-4955-a1f0-6a3f0ca2192e",
+              "isExpired" : false,
+              "isEvaluation" : true,
+              "isWiredEnabled" : false,
+              "term" : 0,
+              "primaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4",
+              "secondaryUDI" : "ISE-VM-K9:V01:9CBN8CHLIH4"
+            },
+            "nil" : false,
+            "globalScope" : false,
+            "typeSubstituted" : false
+          } ]
+        }, "deployment" ]
+      }
+    },
+    "postureInfo" : {
+      "activePoliciesCount" : 0,
+      "inActivePoliciesCount" : 18,
+      "lastPostureFeedUpdateTimeStamp" : "",
+      "postureFeedUpdateMode" : "Never Updated",
+      "totalNoOfRequirements" : 30,
+      "noOfRequirementsUsed" : 0,
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "postureLeaseEnabled" : false,
+      "gracePeriodEnabled" : false
+    },
+    "kongInfo" : {
+      "deploymentID" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+      "nodeList" : {
+        "node" : [ ]
+      }
+    },
+    "iseCloudInfo" : {
+      "content" : [ {
+        "name" : "{http://www.cisco.com/IseCloudInfo}DeploymentID",
+        "declaredType" : "java.lang.String",
+        "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.IseCloudInfo",
+        "value" : "26c7163f-58f9-4374-97b2-98213b2f7959",
+        "nil" : false,
+        "globalScope" : false,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.cisco.com/IseCloudInfo}VirtualInstance",
+        "declaredType" : "java.lang.String",
+        "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.IseCloudInfo",
+        "value" : "",
+        "nil" : false,
+        "globalScope" : false,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.cisco.com/IseCloudInfo}InstanceType",
+        "declaredType" : "java.lang.String",
+        "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.IseCloudInfo",
+        "value" : "",
+        "nil" : false,
+        "globalScope" : false,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.cisco.com/IseCloudInfo}Region",
+        "declaredType" : "java.lang.String",
+        "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.IseCloudInfo",
+        "value" : "",
+        "nil" : false,
+        "globalScope" : false,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.cisco.com/IseCloudInfo}ImageType",
+        "declaredType" : "java.lang.String",
+        "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.IseCloudInfo",
+        "value" : "",
+        "nil" : false,
+        "globalScope" : false,
+        "typeSubstituted" : false
+      }, {
+        "name" : "{http://www.cisco.com/IseCloudInfo}CloudProvider",
+        "declaredType" : "java.lang.String",
+        "scope" : "com.cisco.cpm.infrastructure.telemetry.jaxbgen.IseCloudInfo",
+        "value" : "",
+        "nil" : false,
+        "globalScope" : false,
+        "typeSubstituted" : false
+      } ]
+    }
+  }
+}

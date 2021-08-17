@@ -40,7 +40,7 @@ def get_deployment_info(api):
         #get CPU info
         node_core_count = curNode[12]['value']
         node_peak_cpu = curNode[8]['value']
-        node_vm_cpu_resv = round(int(curNode[16]['value'].split(" ")[0],2))
+        node_vm_cpu_resv = round(float(curNode[16]['value'].split(" ")[0]),2)
         node_vm_cpu_limit = round(int((curNode[18]['value'].split(" ")[0]))*.001,2)
         print("Node has {} CPU cores, and has peaked at {} % utilization at one point".format(node_core_count,node_peak_cpu))
         print("Node has {} reserved for CPU in hypervisor".format(node_vm_cpu_resv,2))

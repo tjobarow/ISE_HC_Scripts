@@ -1,0 +1,694 @@
+{
+    "Default": [
+        {
+            "Default": {
+                "identitySourceName": "All_User_ID_Stores",
+                "ifAuthFail": "REJECT",
+                "ifProcessFail": "DROP",
+                "ifUserNotFound": "REJECT",
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authentication/3ba692e3-bb97-4445-9acb-9d1b5b6d00c4",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "rule": {
+                    "condition": null,
+                    "default": true,
+                    "hitCounts": 0,
+                    "id": "3ba692e3-bb97-4445-9acb-9d1b5b6d00c4",
+                    "name": "Default",
+                    "rank": 2,
+                    "state": "enabled"
+                }
+            },
+            "Dot1X": {
+                "identitySourceName": "All_User_ID_Stores",
+                "ifAuthFail": "REJECT",
+                "ifProcessFail": "DROP",
+                "ifUserNotFound": "REJECT",
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authentication/5b052a95-01a7-43d6-9f55-4449efd577f9",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile.",
+                                "id": "7bf20651-c351-4646-8496-34f821510da2",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wired_802.1X"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile.",
+                                "id": "a76bd4c2-2a3f-4d89-9972-6f072ec5ef6f",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wireless_802.1X"
+                            }
+                        ],
+                        "conditionType": "ConditionOrBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "5b052a95-01a7-43d6-9f55-4449efd577f9",
+                    "name": "Dot1X",
+                    "rank": 1,
+                    "state": "enabled"
+                }
+            },
+            "MAB": {
+                "identitySourceName": "Internal Endpoints",
+                "ifAuthFail": "REJECT",
+                "ifProcessFail": "DROP",
+                "ifUserNotFound": "CONTINUE",
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authentication/0ffb9f6f-ff92-4110-9216-d5c14717dc7e",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile.",
+                                "id": "a3c72887-aa9f-4ad3-a455-58647839046a",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wired_MAB"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile.",
+                                "id": "b5d3f0fa-47ec-4233-a72b-8b1e45b2140b",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wireless_MAB"
+                            }
+                        ],
+                        "conditionType": "ConditionOrBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "0ffb9f6f-ff92-4110-9216-d5c14717dc7e",
+                    "name": "MAB",
+                    "rank": 0,
+                    "state": "enabled"
+                }
+            }
+        },
+        {
+            "Testing_Local": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/exception/918ad045-7eb4-484d-986a-fb92b84c58a5",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "PermitAccess"
+                ],
+                "rule": {
+                    "condition": {
+                        "attributeName": "Description",
+                        "attributeValue": "idk",
+                        "conditionType": "ConditionAttributes",
+                        "dictionaryName": "IdentityGroup",
+                        "dictionaryValue": null,
+                        "isNegate": false,
+                        "link": null,
+                        "operator": "equals"
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "918ad045-7eb4-484d-986a-fb92b84c58a5",
+                    "name": "Testing_Local",
+                    "rank": 0,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            }
+        },
+        {
+            "Global Exceptions Rule 1": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/global-exception/28e699a4-2c21-4fa4-b8d4-0a2559b3e110",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "DenyAccess"
+                ],
+                "rule": {
+                    "condition": {
+                        "attributeName": "Description",
+                        "attributeValue": "test",
+                        "conditionType": "ConditionAttributes",
+                        "dictionaryName": "IdentityGroup",
+                        "dictionaryValue": null,
+                        "isNegate": false,
+                        "link": null,
+                        "operator": "equals"
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "28e699a4-2c21-4fa4-b8d4-0a2559b3e110",
+                    "name": "Global Exceptions Rule 1",
+                    "rank": 0,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            }
+        },
+        {
+            "Basic_Authenticated_Access": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/4ebec372-70ad-4f14-907b-8efbedc71266",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "PermitAccess"
+                ],
+                "rule": {
+                    "condition": {
+                        "conditionType": "ConditionReference",
+                        "description": "Default condition used for basic Network Access requiring that authentication was successful.",
+                        "id": "79258662-4455-4dda-9a2d-f4d180f52552",
+                        "isNegate": false,
+                        "link": null,
+                        "name": "Network_Access_Authentication_Passed"
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "4ebec372-70ad-4f14-907b-8efbedc71266",
+                    "name": "Basic_Authenticated_Access",
+                    "rank": 10,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            },
+            "Compliant_Devices_Access": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/f68d3968-88c8-4de6-8259-428af373a0aa",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "PermitAccess"
+                ],
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition used for basic Network Access requiring that authentication was successful.",
+                                "id": "79258662-4455-4dda-9a2d-f4d180f52552",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Network_Access_Authentication_Passed"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for compliant devices",
+                                "id": "0ebbda59-2b99-4e90-84f0-06fcf3741bce",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Compliant_Devices"
+                            }
+                        ],
+                        "conditionType": "ConditionAndBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "f68d3968-88c8-4de6-8259-428af373a0aa",
+                    "name": "Compliant_Devices_Access",
+                    "rank": 5,
+                    "state": "disabled"
+                },
+                "securityGroup": null
+            },
+            "Default": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/adf061d1-664d-442d-878f-0b7dddc4ead3",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "DenyAccess"
+                ],
+                "rule": {
+                    "condition": null,
+                    "default": true,
+                    "hitCounts": 0,
+                    "id": "adf061d1-664d-442d-878f-0b7dddc4ead3",
+                    "name": "Default",
+                    "rank": 11,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            },
+            "Employee_EAP-TLS": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/5e7a6e1a-eb81-49e6-8183-71b97f9d6896",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "PermitAccess"
+                ],
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile.",
+                                "id": "a76bd4c2-2a3f-4d89-9972-6f072ec5ef6f",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wireless_802.1X"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for BYOD flow for any device that has passed the NSP process",
+                                "id": "4994c285-7095-4d5b-a21c-386c0ba10ecb",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "BYOD_is_Registered"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for BYOD flow for any device that has passed the NSP process",
+                                "id": "ee709788-361e-4bf9-87bb-117782939dd5",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "EAP-TLS"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for BYOD flow for any device that has passed the NSP process",
+                                "id": "43216409-bdcd-4c4d-9deb-85ca9743e46c",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "MAC_in_SAN"
+                            }
+                        ],
+                        "conditionType": "ConditionAndBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "5e7a6e1a-eb81-49e6-8183-71b97f9d6896",
+                    "name": "Employee_EAP-TLS",
+                    "rank": 6,
+                    "state": "disabled"
+                },
+                "securityGroup": "BYOD"
+            },
+            "Employee_Onboarding": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/a6ff998c-53ad-4a0e-b9be-92d795422733",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "NSP_Onboard"
+                ],
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile.",
+                                "id": "a76bd4c2-2a3f-4d89-9972-6f072ec5ef6f",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wireless_802.1X"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for BYOD Onboarding flow",
+                                "id": "1e0b4326-8596-4834-bd3f-6158428da32f",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "EAP-MSCHAPv2"
+                            }
+                        ],
+                        "conditionType": "ConditionAndBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "a6ff998c-53ad-4a0e-b9be-92d795422733",
+                    "name": "Employee_Onboarding",
+                    "rank": 7,
+                    "state": "disabled"
+                },
+                "securityGroup": "BYOD"
+            },
+            "NonCompliant_Devices_Redirect": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/c80966aa-b0e0-40c4-baad-99e39f7a845d",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "Cisco_Temporal_Onboard"
+                ],
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition used for basic Network Access requiring that authentication was successful.",
+                                "id": "79258662-4455-4dda-9a2d-f4d180f52552",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Network_Access_Authentication_Passed"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for non-compliant devices",
+                                "id": "35c41b38-b1e0-4d20-aca7-376c7bea6b95",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Non_Compliant_Devices"
+                            }
+                        ],
+                        "conditionType": "ConditionAndBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "c80966aa-b0e0-40c4-baad-99e39f7a845d",
+                    "name": "NonCompliant_Devices_Redirect",
+                    "rank": 4,
+                    "state": "disabled"
+                },
+                "securityGroup": null
+            },
+            "Profiled Cisco IP Phones": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/13065643-bb67-4f89-af2d-caabfc7a30b2",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "Cisco_IP_Phones"
+                ],
+                "rule": {
+                    "condition": {
+                        "attributeName": "Name",
+                        "attributeValue": "Endpoint Identity Groups:Profiled:Cisco-IP-Phone",
+                        "conditionType": "ConditionAttributes",
+                        "dictionaryName": "IdentityGroup",
+                        "dictionaryValue": null,
+                        "isNegate": false,
+                        "link": null,
+                        "operator": "equals"
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "13065643-bb67-4f89-af2d-caabfc7a30b2",
+                    "name": "Profiled Cisco IP Phones",
+                    "rank": 1,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            },
+            "Profiled Non Cisco IP Phones": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/035aaa88-a009-406a-8ca1-b2f8e408df7e",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "Non_Cisco_IP_Phones"
+                ],
+                "rule": {
+                    "condition": {
+                        "conditionType": "ConditionReference",
+                        "description": "Default condition used to match Non Cisco IP Phones",
+                        "id": "be7d5f50-4f57-4b78-b1e3-4d808f56bce9",
+                        "isNegate": false,
+                        "link": null,
+                        "name": "Non_Cisco_Profiled_Phones"
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "035aaa88-a009-406a-8ca1-b2f8e408df7e",
+                    "name": "Profiled Non Cisco IP Phones",
+                    "rank": 2,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            },
+            "Unknown_Compliance_Redirect": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/09b88557-fadd-4b9c-b27d-8930d5e22f95",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "Cisco_Temporal_Onboard"
+                ],
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition used for basic Network Access requiring that authentication was successful.",
+                                "id": "79258662-4455-4dda-9a2d-f4d180f52552",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Network_Access_Authentication_Passed"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for unknown compliance devices",
+                                "id": "ffbe31e8-f5c4-46db-855c-5a36cc63a70d",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Compliance_Unknown_Devices"
+                            }
+                        ],
+                        "conditionType": "ConditionAndBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "09b88557-fadd-4b9c-b27d-8930d5e22f95",
+                    "name": "Unknown_Compliance_Redirect",
+                    "rank": 3,
+                    "state": "disabled"
+                },
+                "securityGroup": null
+            },
+            "Wi-Fi_Guest_Access": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/170da893-8e39-43c5-b2fd-41b8494c6b56",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "PermitAccess"
+                ],
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition for guest flow",
+                                "id": "70bc8464-239f-4a3e-9892-2be0d2577eb9",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Guest_Flow"
+                            },
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile.",
+                                "id": "b5d3f0fa-47ec-4233-a72b-8b1e45b2140b",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wireless_MAB"
+                            }
+                        ],
+                        "conditionType": "ConditionAndBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "170da893-8e39-43c5-b2fd-41b8494c6b56",
+                    "name": "Wi-Fi_Guest_Access",
+                    "rank": 8,
+                    "state": "disabled"
+                },
+                "securityGroup": "Guests"
+            },
+            "Wi-Fi_Redirect_to_Guest_Login": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/8dcda315-fd4b-4a5b-8cd9-a87b69b7bdf4",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "Cisco_WebAuth"
+                ],
+                "rule": {
+                    "condition": {
+                        "conditionType": "ConditionReference",
+                        "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile.",
+                        "id": "b5d3f0fa-47ec-4233-a72b-8b1e45b2140b",
+                        "isNegate": false,
+                        "link": null,
+                        "name": "Wireless_MAB"
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "8dcda315-fd4b-4a5b-8cd9-a87b69b7bdf4",
+                    "name": "Wi-Fi_Redirect_to_Guest_Login",
+                    "rank": 9,
+                    "state": "disabled"
+                },
+                "securityGroup": null
+            },
+            "Wireless Black List Default": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/dd7a11d0-d9a4-4970-b993-1eb4b8f20977/authorization/f7cdc7c2-1431-40c1-8436-b6a65736028b",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "Blackhole_Wireless_Access"
+                ],
+                "rule": {
+                    "condition": {
+                        "children": [
+                            {
+                                "conditionType": "ConditionReference",
+                                "description": "Default condition used to match any authentication request from Cisco Wireless LAN Controller.",
+                                "id": "9de37977-81c6-4f86-b407-b163ca45a1af",
+                                "isNegate": false,
+                                "link": null,
+                                "name": "Wireless_Access"
+                            },
+                            {
+                                "attributeName": "Name",
+                                "attributeValue": "Endpoint Identity Groups:Blacklist",
+                                "conditionType": "ConditionAttributes",
+                                "dictionaryName": "IdentityGroup",
+                                "dictionaryValue": null,
+                                "isNegate": false,
+                                "link": null,
+                                "operator": "equals"
+                            }
+                        ],
+                        "conditionType": "ConditionAndBlock",
+                        "isNegate": false,
+                        "link": null
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "f7cdc7c2-1431-40c1-8436-b6a65736028b",
+                    "name": "Wireless Black List Default",
+                    "rank": 0,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            }
+        }
+    ],
+    "Testing": [
+        {
+            "Default": {
+                "identitySourceName": "All_User_ID_Stores",
+                "ifAuthFail": "REJECT",
+                "ifProcessFail": "DROP",
+                "ifUserNotFound": "REJECT",
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/5c002f60-080b-4896-93f7-64a020d0a2bb/authentication/903900a5-3efd-4bd7-b4c8-9ba7ada54092",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "rule": {
+                    "condition": null,
+                    "default": true,
+                    "hitCounts": 0,
+                    "id": "903900a5-3efd-4bd7-b4c8-9ba7ada54092",
+                    "name": "Default",
+                    "rank": 0,
+                    "state": "enabled"
+                }
+            }
+        },
+        {},
+        {
+            "Global Exceptions Rule 1": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/global-exception/28e699a4-2c21-4fa4-b8d4-0a2559b3e110",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "DenyAccess"
+                ],
+                "rule": {
+                    "condition": {
+                        "attributeName": "Description",
+                        "attributeValue": "test",
+                        "conditionType": "ConditionAttributes",
+                        "dictionaryName": "IdentityGroup",
+                        "dictionaryValue": null,
+                        "isNegate": false,
+                        "link": null,
+                        "operator": "equals"
+                    },
+                    "default": false,
+                    "hitCounts": 0,
+                    "id": "28e699a4-2c21-4fa4-b8d4-0a2559b3e110",
+                    "name": "Global Exceptions Rule 1",
+                    "rank": 0,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            }
+        },
+        {
+            "Default": {
+                "link": {
+                    "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/5c002f60-080b-4896-93f7-64a020d0a2bb/authorization/6c32de31-215d-4660-9bf1-888f319e570f",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "profile": [
+                    "DenyAccess"
+                ],
+                "rule": {
+                    "condition": null,
+                    "default": true,
+                    "hitCounts": 0,
+                    "id": "6c32de31-215d-4660-9bf1-888f319e570f",
+                    "name": "Default",
+                    "rank": 0,
+                    "state": "enabled"
+                },
+                "securityGroup": null
+            }
+        }
+    ]
+}

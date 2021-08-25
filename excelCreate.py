@@ -39,7 +39,75 @@ class createExcel:
         self.workbook.save("Deployment_NAC_Policy_Info.xlsx")
 
     
+def authczConditionWorkbook(self,policy_set_info):
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~ WRITING AUTHC/Z DATA TO EXCEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        if "Authc and Authz Rules" in self.workbook.sheetnames:
+            ws = self.workbook.remove_sheet("Authc and Authz Rules")
+        ws = self.workbook.create_sheet("Authc and Authz Rules")
+        ws.insert_cols(0,100)
+        cell_row = 1
+        for policy_set in policy_set_info:
+            ws.insert_rows(ws.max_row,2)
+            ##Authentication policy
+            ws["A{}".format(cell_row)] = "Policy Set: {}".format(policy_set)
+            ws["A{}".format(cell_row)].fill = PatternFill(fgColor="1E4471",fill_type="solid")
+            ws["A{}".format(cell_row)].font = Font(size="24",bold=True,color="FFFFFF")
+            ws["A{}".format(cell_row)].border = Border(left=Side(border_style="thin",color='000000'),right=Side(border_style="thin",color='000000'),top=Side(border_style="thin",color='000000'),bottom=Side(border_style="thin",color='000000'))
+            ws.merge_cells("A{}:B{}".format(cell_row,cell_row))
+            cell_row += 1
+            ws["A{}".format(cell_row)] = "Authentication Rules"
+            ws["A{}".format(cell_row)].fill = PatternFill(fgColor="1E4471",fill_type="solid")
+            ws["A{}".format(cell_row)].font = Font(size="20",bold=True,color="FFFFFF")
+            ws["A{}".format(cell_row)].border = Border(left=Side(border_style="thin",color='000000'),right=Side(border_style="thin",color='000000'),top=Side(border_style="thin",color='000000'),bottom=Side(border_style="thin",color='000000'))
+            ws.merge_cells("A{}:B{}".format(cell_row,cell_row))
+            cell_row += 1
+            for authc_rule in policy_set_info[policy_set][0]:
+                ws.insert_rows(ws.max_row,1)
+                ws["A{}".format(cell_row)] = "Authentication Rule {}".format(policy_set_info[policy_set][0][authc_rule]["rule"]["name"])
+                ws["B{}".format(cell_row)] = "references the {} identity source sequence".format(policy_set_info[policy_set][0][authc_rule]["identitySourceName"])
+                ws["C{}".format(cell_row)] = "If authc fails: {}".format(policy_set_info[policy_set][0][authc_rule]["ifAuthFail"])
+                ws["D{}".format(cell_row)] = "If process fails: {}".format(policy_set_info[policy_set][0][authc_rule]["ifProcessFail"])
+                ws["E{}".format(cell_row)] = "If user is not found: {}".format(policy_set_info[policy_set][0][authc_rule]["ifUserNotFound"])
+                cell_row += 1
+                ascii_start = 70
+                cond_string = ""
+                if policy_set_info[policy_set][0][authc_rule]["rule"]["condition"] is not "null":
+                    if "children" in policy_set_info[policy_set][0][authc_rule]["rule"]["condition"]:
+                        for child in policy_set_info[policy_set][0][authc_rule]["rule"]["condition"]["children"]:
+                            if "children" in child:
+                                for childs_child in child:
+                                    cond_string += "If "
+                                    #IF ITS A CUSTOM
+                                    if "attributeName" in childs_child:
+                                        if childs_child['isNegate'] is "false":
+                                            cond_string += "Attribute Name: {}, Value: {} {} TRUE ".format(childs_child['attributeName'],childs_child['attributeValue'],childs_child['operator'])
+                                        else:
+                                            cond_string += "Attribute Name: {}, Value: {} {} NOT TRUE ".format(childs_child['attributeName'],childs_child['attributeValue'],childs_child['operator'])
+                                    ##IF ITS DICTIONARY CONDITION OR SAVED CONDITION
+                                    ## POSSIBLE TO ENHANCE THIS BY PULLING ALL DICTIONARY CONDITIONS
+                                    else:
+                                        if childs_child['isNegate'] is "false":
+                                            cond_string += "Dictionary condition named {} is TRUE ".format(childs_child['attributeName'],childs_child['attributeValue'],childs_child['operator'])
+                                        else:
+                                            cond_string += "Dictionary condition named {} is NOT TRUE ".format(childs_child['attributeName'],childs_child['attributeValue'],childs_child['operator'])
+                                    
 
+
+                                    
+
+                           if type(child) is not dict:
+                               break
+
+                    
+                    for condition in policy_set_info[policy_set][0][authc_rule]["rule"]["condition"]
+
+                ws["F{}".format(cell_row)] = "If user is not found: {}".format(policy_set_info[policy_set][0][authc_rule]["ifUserNotFound"])
+                ws["G{}".format(cell_row)] = "If user is not found: {}".format(policy_set_info[policy_set][0][authc_rule]["ifUserNotFound"])
+                ws["A{}".format(cell_row)] = "Policy Set: {}".format(policy_set)
+                ws["A{}".format(cell_row)].fill = PatternFill(fgColor="1E4471",fill_type="solid")
+                ws["A{}".format(cell_row)].font = Font(size="24",bold=True,color="FFFFFF")
+                ws["A{}".format(cell_row)].border = Border(left=Side(border_style="thin",color='000000'),right=Side(border_style="thin",color='000000'),top=Side(border_style="thin",color='000000'),bottom=Side(border_style="thin",color='000000'))
+                
 
 
 

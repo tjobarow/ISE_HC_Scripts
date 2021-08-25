@@ -1,4 +1,5 @@
 from ciscoisesdk import IdentityServicesEngineAPI
+from ciscoisesdk.api.v3_0_0.authorization_profile import AuthorizationProfile
 import urllib3
 import json
 import os
@@ -12,12 +13,17 @@ class get_policy_info:
         self.policy_set_rules = {}
         self.api = IdentityServicesEngineAPI(username="ers_admin",password="Cisco123!",version="3.0.0",base_url='https://ise31.obarowski.lab',verify=False)
         self.getPolicy()
+        #GRAB ALL DACLS BY NAME
+        self.dacl_names = self.getDownloadableACL()
         #policy_set_rules.update({"authorization_profiles":getAuthzProfiles(api)})
 
         #policy_set_rules.update({"dacls":getDownloadableACL(api)})
 
         #listAuthzDaclInUse(policy_set_rules,api)
         
+    def returnPolicySetInfo(self):
+        return self.policy_set_rules
+    
     def getPolicy(self):
         self.policy_sets = self.getPolicySets()
         #print(json.dumps(self.policy_sets, indent=4, sort_keys=True))
@@ -130,30 +136,41 @@ class get_policy_info:
             #print(json.dumps(dacl_contents, indent=4, sort_keys=True))
         return dacl_obj
 
-    def listAuthzDaclInUse(self):
-        authzInUse = []
-        authzInUseNames = []
-        
-        #print(json.dumps(policy_set_rules['all_policy_set_rules'], indent=4, sort_keys=True))
-
+    def listAuthzInUse(self):
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GETTING AUTHZ PROFILES THAT ARE IN USE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        self.authzInUse = []
         for policy_set in self.policy_set_rules['all_policy_set_rules']:
-
-            #print(json.dumps(policy_set, indent=4, sort_keys=True))
-
             for authz_rule in self.policy_set_rules['all_policy_set_rules'][policy_set][3]:
                 rule_contents = self.policy_set_rules['all_policy_set_rules'][policy_set][3][authz_rule]
                 #print(json.dumps(rule_contents, indent=4, sort_keys=True))
-                authzInUse.append({
+                self.authzInUse.append({
                     "profileName":rule_contents['profile'][0]
                     ,"usedInAuthzRule":rule_contents['rule']['name']
                     ,"usedInPolicySet":policy_set
                     }.copy())
-                authzInUseNames.append(str(rule_contents['profile'][0]))
+        return self.authzInUse
 
+    def listDACLInUse(self):
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GETTING DACLS THAT ARE IN USE~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        dacl_list = []
+        #If we haven't discovered the authz profiles in use yet, we need to do so before getting dACLs in use
+        if len(self.authzInUse) == 0:
+            self.listAuthzInUse()
         #### IF THE AUTHZ PROFILE IS IN THE LIST OF USED PROFILES, WE GRAB THE AUTHZ PROFILE INFO
-        authzInUseNames = list(dict.fromkeys(authzInUseNames))
-        for authz_prof_name in authzInUseNames:
-            authz_profile = self.api.authorization_profile.get_authorization_profile_by_name(name=authz_prof_name).response
+        for authz_info in self.authzInUse:
+            authz_profile = self.api.authorization_profile.get_authorization_profile_by_name(name=authz_info['profileName']).response
+            if "daclName" in authz_profile['AuthorizationProfile']:
+                dacl_contents = self.dacl_names[authz_profile['AuthorizationProfile']["daclName"]]
+                #print(json.dumps(dacl_contents, indent=4, sort_keys=True))
+                dacl_list.append({
+                    "authz_info":authz_info,
+                    "authz_profile":authz_profile,
+                    "dacl_info":dacl_contents
+                })
+        #for obj in dacl_list:
+        #    print(json.dumps(obj, indent=4, sort_keys=False))
+
+        return dacl_list
 
     def getIDSeqInUse(self):
         id_seq_in_use = []
@@ -209,7 +226,6 @@ class get_policy_info:
             id_source_seq = self.api.identity_sequence.get_identity_sequence_by_id(id=idStore['id']).response
             print(json.dumps(id_source_seq, indent=4, sort_keys=True))
 
-
     def getIDStores(self):
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GETTING NAC IDENTITY STORES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         id_store_dict = {}
@@ -218,6 +234,7 @@ class get_policy_info:
         for id_store in id_stores:
             id_store_dict.update({id_store['name']:id_store})
         return id_store_dict
+
 
 
 

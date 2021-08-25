@@ -520,12 +520,27 @@
                                     "name": "Guest_Flow"
                                 },
                                 {
-                                    "conditionType": "ConditionReference",
-                                    "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile.",
-                                    "id": "b5d3f0fa-47ec-4233-a72b-8b1e45b2140b",
+                                    "children": [
+                                        {
+                                            "conditionType": "ConditionReference",
+                                            "description": "A condition to match MAC Authentication Bypass service based authentication requests from wireless LAN controllers, according to the corresponding MAB attributes defined in the device profile.",
+                                            "id": "b5d3f0fa-47ec-4233-a72b-8b1e45b2140b",
+                                            "isNegate": false,
+                                            "link": null,
+                                            "name": "Wireless_MAB"
+                                        },
+                                        {
+                                            "conditionType": "ConditionReference",
+                                            "description": "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile.",
+                                            "id": "a3c72887-aa9f-4ad3-a455-58647839046a",
+                                            "isNegate": false,
+                                            "link": null,
+                                            "name": "Wired_MAB"
+                                        }
+                                    ],
+                                    "conditionType": "ConditionOrBlock",
                                     "isNegate": false,
-                                    "link": null,
-                                    "name": "Wireless_MAB"
+                                    "link": null
                                 }
                             ],
                             "conditionType": "ConditionAndBlock",
@@ -670,6 +685,35 @@
                 }
             },
             {
+                "AUTHZ_PROF_TESTING": {
+                    "link": {
+                        "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/5c002f60-080b-4896-93f7-64a020d0a2bb/authorization/f0a19fbb-0175-4a5b-8461-86dd7ff9ad41",
+                        "rel": "self",
+                        "type": "application/json"
+                    },
+                    "profile": [
+                        "TESTING"
+                    ],
+                    "rule": {
+                        "condition": {
+                            "attributeName": "Location",
+                            "attributeValue": "All Locations",
+                            "conditionType": "ConditionAttributes",
+                            "dictionaryName": "DEVICE",
+                            "dictionaryValue": null,
+                            "isNegate": false,
+                            "link": null,
+                            "operator": "equals"
+                        },
+                        "default": false,
+                        "hitCounts": 0,
+                        "id": "f0a19fbb-0175-4a5b-8461-86dd7ff9ad41",
+                        "name": "AUTHZ_PROF_TESTING",
+                        "rank": 1,
+                        "state": "enabled"
+                    },
+                    "securityGroup": null
+                },
                 "Default": {
                     "link": {
                         "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/5c002f60-080b-4896-93f7-64a020d0a2bb/authorization/6c32de31-215d-4660-9bf1-888f319e570f",
@@ -685,6 +729,48 @@
                         "hitCounts": 0,
                         "id": "6c32de31-215d-4660-9bf1-888f319e570f",
                         "name": "Default",
+                        "rank": 2,
+                        "state": "enabled"
+                    },
+                    "securityGroup": null
+                },
+                "MORE_ACL_AUTHZP": {
+                    "link": {
+                        "href": "https://ise31.obarowski.lab/api/v1/policy/network-access/policy-set/5c002f60-080b-4896-93f7-64a020d0a2bb/authorization/ff894ac4-46d4-4f06-a4c5-003b49df9261",
+                        "rel": "self",
+                        "type": "application/json"
+                    },
+                    "profile": [
+                        "ACL_TESTING"
+                    ],
+                    "rule": {
+                        "condition": {
+                            "children": [
+                                {
+                                    "conditionType": "ConditionReference",
+                                    "description": "Default condition for BYOD flow for any device that has passed the NSP process",
+                                    "id": "4994c285-7095-4d5b-a21c-386c0ba10ecb",
+                                    "isNegate": false,
+                                    "link": null,
+                                    "name": "BYOD_is_Registered"
+                                },
+                                {
+                                    "conditionType": "ConditionReference",
+                                    "description": "Default condition used for basic Network Access requiring that authentication was successful.",
+                                    "id": "79258662-4455-4dda-9a2d-f4d180f52552",
+                                    "isNegate": false,
+                                    "link": null,
+                                    "name": "Network_Access_Authentication_Passed"
+                                }
+                            ],
+                            "conditionType": "ConditionAndBlock",
+                            "isNegate": false,
+                            "link": null
+                        },
+                        "default": false,
+                        "hitCounts": 0,
+                        "id": "ff894ac4-46d4-4f06-a4c5-003b49df9261",
+                        "name": "MORE_ACL_AUTHZP",
                         "rank": 0,
                         "state": "enabled"
                     },
